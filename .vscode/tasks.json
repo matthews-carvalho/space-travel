@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "Build Game",
+      "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "-I${workspaceFolder}/include",
+        "-I${workspaceFolder}/include/glm",
+        "-I${workspaceFolder}/include/stb_image",
+        "${file}",
+        "${workspaceFolder}/src/glad.c",
+        "${workspaceFolder}/include/stb_image/stb_image.cpp",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "-L${workspaceFolder}/lib-mingw-w64",
+        "-lglfw3dll"
+      ],
+      "options": {
+        "cwd": "C:\\msys64\\ucrt64\\bin"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Compile the game code using g++"
+    }
+  ]
+}
