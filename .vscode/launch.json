@@ -2,32 +2,31 @@
   // Use IntelliSense to learn about possible attributes.
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Launch Program", // Nome da configuração
-      "type": "cppdbg", // Tipo de depuração C++
-      "request": "launch", // Iniciar a depuração
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe", // Executável
-      "args": [], // Argumentos passados para o programa (adicione se necessário)
+      "name": "(gdb) Launch Program", // Configuration name
+      "type": "cppdbg", // Type of C++ debugging
+      "request": "launch", // Start debugging
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe", // Executable
+      "args": [], // Arguments passed to the program (add if necessary)
       "stopAtEntry": false,
-      "cwd": "${workspaceFolder}", // Diretório de trabalho (pasta do workspace)
+      "cwd": "${workspaceFolder}", // Working directory (workspace folder)
       "environment": [],
-      "externalConsole": false, // Use o console integrado do VS Code
-      "MIMode": "gdb", // Usando GDB para depuração
-      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe", // Caminho para o depurador GDB
+      "externalConsole": false, // Use VS Code integrated console
+      "MIMode": "gdb", // Using GDB for debugging
+      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe", // Path to GDB debugger
       "setupCommands": [
         {
-          "description": "Habilitar modo de impressão adequada para GDB",
+          "description": "Enable pretty printing mode for GDB",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "C/C++: g++.exe build active file", // Task de build que será chamada antes de iniciar a depuração
-      "internalConsoleOptions": "openOnSessionStart", // Abre o console interno
+      "preLaunchTask": "C/C++: g++.exe build active file", // Build task to be called before starting debugging
+      "internalConsoleOptions": "openOnSessionStart", // Open internal console
       "logging": {
-        "engineLogging": true, // Para diagnosticar problemas
+        "engineLogging": true, // For diagnosing issues
         "trace": true
       },
       "visualizerFile": "${workspaceFolder}/.vscode/gdb.visualizers"
